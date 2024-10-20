@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+/* Light Mode */
+.light-mode {
+  background: #1A1E71; /* Solid background color */
+  color: #333; /* Default text color */
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #1A1E71; /* Solid background color */
+  color: #fff; /* Default text color for dark mode */
+}
+
+/* White Rectangle with Gradient for Light Mode */
+.white-rectangle {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 54%, rgba(255, 255, 255, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Dark Rectangle with Gradient for Dark Mode */
+.dark-rectangle {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 54%, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Contact Section Layout */
+.contact-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center content */
+  justify-content: flex-start; /* Align content to the top */
+  padding: 40px; /* Increased padding */
+  height: 100vh; /* Full height of the viewport */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Content Section */
+.content {
+  text-align: center; /* Center text */
+  position: relative;
+  z-index: 2; /* Ensure content is above the rectangle */
+  font-family: 'Yeseva One', cursive; /* Apply Yeseva One font */
+}
+
+/* Contact Title */
+.contact-title {
+  font-size: 4rem; /* Increased size for more emphasis */
+  font-weight: bold;
+  color: #216e39; /* Dark green for light mode */
+  margin-bottom: 40px; /* More space below the title */
+ font-family: 'Yeseva One', cursive; /* Apply Yeseva One font */
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 30px; /* Increased margin for more space */
+}
+
+.contact-image {
+  width: 100%; /* Ensure it scales based on screen size */
+  max-width: 700px; /* Increased maximum width */
+}
+
+/* Contact Info Styling */
+.contact-info {
+  margin-top: auto; /* Push contact info to the bottom */
+  font-size: 3rem; /* Increased font size */
+  font-weight: bold;
+  line-height: 3.5rem; /* Increased line height for better readability */
+}
+
+/* Dark Mode Text Styling */
+.dark-mode .contact-title,
+.dark-mode .contact-info {
+  color: #ffffff; /* Lighter color for dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 3rem; /* Slightly smaller on medium devices */
+  }
+
+  .contact-info {
+    font-size: 2.5rem; /* Adjusted size for medium screens */
+    line-height: 3rem; /* Adjusted line height */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 2.5rem; /* Further reduce font size for smaller screens */
+  }
+
+  .contact-info {
+    font-size: 2rem; /* Further reduce font size for smaller screens */
+    line-height: 2.5rem; /* Adjust line height */
+  }
+
+  .contact-image {
+    max-width: 100%; /* Ensure it scales down on small devices */
+  }
+}

@@ -1,0 +1,93 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-around; /* Spread out the items equally */
+  align-items: center; /* Align items in the center vertically */
+  padding: 10px 0;
+  flex-wrap: nowrap; /* Ensure that items don't wrap to the next line */
+  transition: background-color 0.3s ease;
+  flex-direction: row; /* Horizontal by default */
+}
+
+.navbar.light {
+  background-color: white; /* Light mode background */
+  color: #333; /* Light mode text color */
+}
+
+.navbar.dark {
+  background-color: black; /* Dark mode background */
+  color: #fff; /* Dark mode text color */
+}
+
+/* Ensure the list takes up the full width and distributes space equally */
+.navbar ul {
+  display: flex;
+  width: 100%; /* Ensure the navbar spans the full width */
+  list-style: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+  justify-content: space-around; /* Ensure equal space between items */
+  align-items: center; /* Ensure buttons are vertically centered */
+}
+
+/* Each list item (li) will take up equal space */
+.navbar li {
+  flex-grow: 1; /* Ensure the items grow equally */
+  text-align: center; /* Center the links */
+  display: flex; /* Flexbox for vertical centering */
+  justify-content: center; /* Horizontally center the buttons */
+  align-items: center; /* Vertically center the buttons */
+}
+
+/* Shared Button Styling */
+.navbar-button {
+  padding: 10px 20px;
+  border: none; /* No border at all */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0; /* Remove extra margins */
+  background-color: transparent; /* Transparent background by default */
+  color: inherit; /* Text color inherits from the navbar */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover and click effects */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure buttons are inline */
+  width: 100%; /* Make sure buttons take full width within the list items */
+}
+
+/* Change button text color based on the theme */
+.navbar.dark .navbar-button {
+  color: #fff; /* White text in dark mode */
+}
+
+.navbar.light .navbar-button {
+  color: #333; /* Dark text in light mode */
+}
+
+/* Button hover styles (no border) */
+.navbar-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Subtle background on hover */
+  color: #000; /* Dark text on hover (neutral) */
+  border: none; /* No border on hover */
+}
+
+/* Button active (click) styles */
+.navbar-button:active, 
+.navbar-button:focus {
+  background-color: rgba(0, 0, 0, 0.2); /* Darker background when clicked */
+  color: #000; /* Dark text when clicked */
+  border: none; /* No border on click */
+  outline: none; /* Remove outline */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+  }
+
+  .navbar .navbar-button {
+    width: 100%; /* Full width buttons on smaller screens */
+    margin: 5px 0; /* Adjust margin for vertical stacking */
+  }
+}

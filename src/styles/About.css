@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+/* Font Family for the specific sections */
+.name,
+.description,
+.projects-div h3,
+.mystack {
+  font-family: 'Yeseva One', cursive; /* Apply Yeseva One font */
+}
+
+/* Light Mode with Background Color */
+.light-mode {
+  background: #1A1E71; /* Solid background color */
+  color: #333; /* Default text color */
+}
+
+/* Dark Mode with Background Color */
+.dark-mode {
+  background: #1A1E71; /* Solid background color */
+  color: #fff; /* Default text color for dark mode */
+}
+
+/* White Rectangle with Gradient for Light Mode */
+.white-rectangle {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 54%, rgba(255, 255, 255, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Dark Rectangle with Gradient for Dark Mode */
+.dark-rectangle {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 54%, rgba(0, 0, 0, 0));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* About Section Layout */
+.about-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center content */
+  justify-content: flex-start; /* Align content to the top */
+  padding: 20px;
+  height: 100vh; /* Full height of the viewport */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  background-color: #1A1E71; /* Match background color */
+  color: #fff; /* Navbar text color */
+  padding: 10px; /* Space around the text */
+  text-align: center; /* Center the text */
+}
+
+/* Content Section */
+.content {
+  text-align: center; /* Center text */
+  position: relative;
+  z-index: 2; /* Ensure content is above the rectangle */
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  flex-direction: column; /* Stack title above image */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  width: 100%; /* Full width of section */
+  margin-top: auto; /* Push to bottom */
+}
+
+/* Profile Image */
+.profile-image {
+  width: auto; /* Maintain original width */
+  height: auto; /* Maintain original height */
+  max-width: 100%; /* Ensure it doesn't exceed the container's width */
+  max-height: 60vh; /* Limit height for larger screens */
+  object-fit: contain; /* Ensure entire image is visible */
+  border-radius: 0; /* No rounding on corners */
+  z-index: 2;
+}
+
+/* Text Styling for Light Mode */
+.name {
+  font-size: 2.5rem; /* Adjusted size for better appearance */
+  font-weight: bold;
+  color: #216e39; /* Dark green for light mode */
+}
+
+.description {
+  font-size: 1.2rem; /* Adjusted size */
+  color: #333; /* Default color for light mode */
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* My Stack Styling */
+.mystack {
+  font-size: 1.8rem; /* Size for the stack title */
+  margin-bottom: 10px; /* Space below the title */
+  color: #000000;
+  z-index: 2;
+}
+/* Dark Mode Text Styling */
+.dark-mode .name,
+.dark-mode .description,
+.dark-mode .mystack {
+  color: #ffffff; /* Lighter color for dark mode */
+}
+
+/* My Projects Blank Div */
+.projects-div {
+  width: 100%; /* Full width */
+  height: 50px; /* Adjust height as needed */
+  margin-top: 20px; /* Space above the projects section */
+  text-align: center; /* Center text */
+  font-size: 45px;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .description {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .mystack {
+    font-size: 1.5rem; /* Adjust size for smaller screens */
+  }
+}
+
+/* Small Devices (Mobile Phones, 480px and below) */
+@media (max-width: 480px) {
+  .profile-image {
+    max-height: 200px; /* Limit height for very small screens */
+  }
+
+  .name {
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .mystack {
+    font-size: 1.3rem; /* Further reduce size for smaller screens */
+  }
+}
